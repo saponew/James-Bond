@@ -99,6 +99,7 @@ if select == 'Objectives':
 
     st.header("Credit Migration")
     if st.checkbox("Summary of Credit Migration"):
+        st.image("https://www.glynholton.com/wp-content/uploads/2013/06/exhibit_default_model_1_v2.png")
         st.subheader("")
         st.write("""
             ### General
