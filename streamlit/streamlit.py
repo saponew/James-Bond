@@ -1,44 +1,32 @@
 import streamlit as st
 import pandas as pd
-import plotly as plt
 import requests
 from pathlib import Path
+import plotly.figure_factory as ff 
+import matplotlib.pyplot as plt
 
-# st.title("James Bond")
-# st.image('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/06/08/Pictures/_d670cd18-a96f-11ea-9c49-07241376e8f9.jpg')
-# st.header("Objective")
-# st.text(
-#     "Corporate Credit rating prediction model, pure default to rating (change), ")
+@st.cache
+def load_data(nrows):
+    data = Path('/Users/wesleysapone/James-Bond/streamlit/data/feature_df.csv')
+    df = pd.read_csv(data, nrows=nrows)
+    
+    return df
 
+@st.cache
+def load_target(nrows):
+    data = Path('/Users/wesleysapone/James-Bond/streamlit/data/xgboost_model_df.csv')
+    target = pd.read_csv(data, nrows=nrows)
+    target = target['rank_change'].values.reshape(-1,1)
+    return target
 
-
-
-
-
-
-
-
-
-# st.header("Dataset Intro")
-# st.text("Kwame working w/ a company that is tyring to predict corporate bond default.  Our take on this project took a couple twists and turns along the way.")  
-# st.text("Our initial goal was to predict whether a bond would default or not.  Once we realized that this would be much more involved than a 2 week project would allow.")
-# st.text("The company was kind enough to give us partial access to some of the data and features they used as features in their")
-
-
-
-
-
-# st.write(pd.DataFrame({
-#     'first column': [1, 2, 3, 4],
-#     'second column': [10, 20, 30, 40]
-# }))
+sample_features = load_data(13000) 
+# sample_target = load_target(3000)
 
 sidebar = st.sidebar.title("Panels")
 
-select = st.sidebar.selectbox("Select",("James Bond", "Objectives", "Dataset", "Model Selection", "Model Evaluation", "Phase 2"))
+select = st.sidebar.selectbox("Select",("James Bond", "Objectives", "Dataset", "Model Selection", "Model Evaluation", "Phase 2"), 4)
 
 
-    
 
 if select == 'James Bond':
     st.title("James Bond")
@@ -61,33 +49,54 @@ if select == 'James Bond':
 if select == 'Objectives':
     st.title("Objectives")
 
-    st.header("Data Collection & Cleaning")
+    # st.header("corporate bond rating change prediction")
     st.write("""
-    ### 
-    - Corporate credit rating prediction model
-    - Changed from pure default to ratings 
-    - Background corporate credit ratings
-    - Who’s the stakeholder?
-
-
+    
+    - Develop a machine learning model that predicts a change in corporate credit ratings over future 12 months for a given corporate bond
+    - Stake holders for this model includes bond investors and risk professionals in charge of bond collateral
+    - We experimented with a number of classification models incl. logistic regression, random forest and GradientBoost
+    - To train our model we obtained  a number of large datasets with corporate financial data, credit ratings, bond/equity pricing and macro data
+    - We refined our feature set by selecting relevant features across various datasets and merging datables
+    - We also  experimented with a variety of rating target variables and ultimately chose 
+    - Future improvements include enhancing our datasets, model refinement and  optimizing target variables
 
     """)
+
+    st.header("Credit Migration")
+    st.write("""
+    - A credit rating quantifies the creditworthiness of a borrower in general terms or with respect to a particular debt or financial obligation
+    - A credit rating or score can be assigned to any entity that seeks to borrow money—an individual, a corporation, a state or provincial authority, or a sovereign government.
+""")
 
 if select == 'Dataset':
-    st.subheader("Data Collection & Cleaning")
+    st.title("Dataset")
+
     st.write("""
-    ### Received assignment from M
+    ## Data Sources
     
-
-
     """)
-    data = Path('/Users/wesleysapone/Desktop/streamlit/data/xgboost_model_df.csv')
-    df = pd.read_csv(data)
+    st.write("""
+    ## challenges wrangling our datasets
+    - CORE_US
+    - EDI_BOND_PRICE
+    - Ratings
+    - Data Cleaning
+    - Asyncio
+    
+    
+    """)
 
+    data = Path('/Users/wesleysapone/James-Bond/streamlit/data/feature_df.csv')
+    df = pd.read_csv(data)
+    
     st.write(df)
+
+
 
 if select == 'Model Selection':
     st.subheader("Logic behind model choices")
+    # st.
+    
     st.write(
         """
         ### 
@@ -99,14 +108,51 @@ if select == 'Model Selection':
 
 if select == 'Model Evaluation':
     st.subheader("Economic")
-    st.write(
-        """
-        ### 
-        
-        
-        
-        """
-    )
+    data = Path('/Users/wesleysapone/James-Bond/streamlit/data/feature_df.csv')
+    df = pd.read_csv(data)
+    
+    st.write(df)
+
+    importance = Path('/Users/wesleysapone/James-Bond/streamlit/data/gboost_importance.csv')
+    boost_imp = pd.read_csv(importance)
+    boost_imp.set_index('1', inplace=True)
+    st.write(boost_imp)
+    st.bar_chart(boost_imp['Feature Importances'])
+
+    hst = pd.DataFrame(sample_features[:300], columns = ['pe', 'close_edi', 'liabilities'])
+    hst.hist()
+    st.pyplot()
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
+
+
+# # Calculating the confusion matrix
+# cm = confusion_matrix(y_test, predictions)
+# cm_df = pd.DataFrame(
+#     cm, index=["Actual 1","Actual 2", "Actual 3"], 
+#                columns=["Predicted 1","Predicted 2", "Predicted 3"])
+
+# acc_score = accuracy_score(y_test, predictions)
+
+# # Displaying results
+# print("Confusion Matrix")
+# display(cm_df)
+# print(f"Accuracy Score : {acc_score}")
+# print("Classification Report")
+# print(classification_report(y_test, predictions))
+
+
+
+
+
+
+
+
+
+
+
+
 
 st.header(select)
 if select == 'Phase 2':
