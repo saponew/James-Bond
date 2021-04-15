@@ -47,12 +47,45 @@ def load_model_df(nrows):
 
 model_df = load_model_df(13498)
 
+
+
 feature_df = load_data(13498) 
 # sample_target = load_target(13498)
 
 sidebar = st.sidebar.title("Panels")
 
-select = st.sidebar.selectbox("Select",("James Bond", "Objectives", "Dataset", "Datasets Cleaning & Challenges", "Model Selection", "Model Evaluation", "Phase 2", "Random Oversampling - Random Forest", "Random Forest Code", "Gradient Boost Code"), 3)
+select = st.sidebar.selectbox("Select",("Deck", "James Bond", "Objectives", "Dataset", "Datasets Cleaning & Challenges", "Model Selection", "Model Evaluation", "Phase 2", "Random Oversampling - Random Forest", "Random Forest Code", "Gradient Boost Code"), 0)
+if select == 'Deck':
+    
+    st.subheader("James Bond")
+    # st.image("/Users/wesleysapone/James-Bond/streamlit/images/intro_deck.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide1.png")
+    st.subheader("DATA")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide2.png")
+    st.subheader("Credit Rating & Migration")
+    st.image("https://www.glynholton.com/wp-content/uploads/2013/06/exhibit_default_model_1_v2.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide3.png")
+    
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide4.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide5.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide6.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide7.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide8.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide9.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide10.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide11.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide12.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide13.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide14.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide15.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide16.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide17.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide18.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide19.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide20.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide21.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide22.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/slide23.png")
 
 
 
@@ -60,6 +93,51 @@ if select == 'James Bond':
     st.title("James Bond")
     st.image('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/06/08/Pictures/_d670cd18-a96f-11ea-9c49-07241376e8f9.jpg')
     st.header("Forecasting a change in corporate bond ratings using machine learning")
+    
+    
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/bal_acc_score_gradient_boost.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/bal_acc_score_plain_jane_rf.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/accuracy_raport.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/bal_over_sample_clf.png")
+    
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/bal_smote_clf.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/clf_pretty_report.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/cm_rf_rank_diff.png")
+    
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/default_param_gb_feat_imp.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/gb_plain_jane_conf_mat_clf_report.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/imb_over_samp.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/imb_param_adj.png")
+
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/imbalanced_clf_rpt.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/lear_rate_simplegboost.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/learning_rate_gboost_report.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/plain_jane_rf_feature_imp.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/ran_os_clf_report.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/random_over_samp_bal_accuracy_score.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/rf_ro_feat_imp.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/rf_ro_recall_plot.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/smote_imb_clf_rpt.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/smote_rf_bal_acc_score.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/smoteen_bal_acc_score.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/smoteen_imb_clf_rpt.png")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/smoteen_rf_clf.png")
+    st.subheader("target count")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/target_count.png")
+    
+    st.subheader("deadly breif case")
+    st.image("https://cdn.pastemagazine.com/www/blogs/lists/2012/10/05/to-russia-with-love-briefcase.jpg")
+    st.image("/Users/wesleysapone/James-Bond/streamlit/images/deadly_breif_case.png")
+    st.subheader("Rocket Pack: Gradient Boost")
+    st.image("https://cdn.pastemagazine.com/www/blogs/lists/2012/10/05/thunderball-rocket-pack.jpg")
+    # st.image("")
+    # st.image("")
+    # st.image("")
+    # st.image("")
+    # st.image("")
+    # st.image("")
+    # st.image("")
+    # st.image("")
     
     # st.write("""
      
