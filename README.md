@@ -16,12 +16,16 @@ Obtained large datasets via SQL from a company active in corporate credit defaul
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/04.png "Logistic Regression Visualization")
 
 ## Random Forest
+### Random Forest: Original Data, Default Parameters 1
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/05.png "Random Forest Original Data, Default Parameters 1")
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/06.png "Random Forest Visualization, Default Parameters 1")
+### Random Forest: Original Data, Max Depth=5
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/07.png "Random Forest Original Data, Max Depth=5")
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/08.png "Random Forest Visualization, Max Depth=5")
+### Random Forest: SMOTE Oversampling, Max depth=5
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/09.png "Random Forest SMOTE Oversampling, Max depth=5")
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/10.png "Random Forest Visualization, SMOTE Oversampling, Max depth=5")
+### Random Forest: SMOTE Oversampling, Max depth=5
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/11.png "Random Forest SMOTEEN Resampling, Max depth=5")
 ![alt text](https://github.com/saponew/James-Bond/blob/main/readme_images/12.png "Random Forest Visualization, SMOTEEN Resampling, Max depth=5")
 
