@@ -34,11 +34,10 @@ Obtained large datasets via SQL from a company active in corporate credit defaul
 #### SMOTE Oversampling, Max depth=5
 <a href="https://github.com/saponew/James-Bond/blob/main/images/09.png"> Random Forest SMOTE Oversampling, Max depth=5</a>
 <br><a href="https://github.com/saponew/James-Bond/blob/main/images/10.png"> Random Forest Visualization, SMOTE Oversampling, Max depth=5</a>
-#### SMOTE Oversampling, Max depth=5
+#### SMOTEEN Resampling, Max depth=5
 <a href="https://github.com/saponew/James-Bond/blob/main/images/11.png"> Random Forest SMOTEEN Resampling, Max depth=5</a>
 <br><a href="https://github.com/saponew/James-Bond/blob/main/images/12.png"> Random Forest Visualization, SMOTEEN Resampling, Max depth=5</a>
 
 ### Gradient Boosting
 <a href="https://github.com/saponew/James-Bond/blob/main/images/13.png"> Gradient Boosting Original Data</a>
 <br><a href="https://github.com/saponew/James-Bond/blob/main/images/14.png"> Gradient Boosting Visualization</a>
-
