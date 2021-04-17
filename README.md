@@ -9,10 +9,10 @@ Obtained large datasets via SQL from a company active in corporate credit defaul
 
 ## Data Cleaning                                                                                       
 
-<a href="https://github.com/saponew/James-Bond/tree/main/dataset/core_us_rating_shifted.py"> Core US Rating Shifted</a>
-<br><a href="https://github.com/saponew/James-Bond/tree/main/dataset/core_bonds_rating.py"> Core Bonds Rating</a>
-<br><a href="https://github.com/saponew/James-Bond/tree/main/dataset/credit_rating_move_v1.py"> Credit Rating Move v.1</a>
-<br><a href="https://github.com/saponew/James-Bond/tree/main/dataset/credit_rating_move_v3.py"> Credit Rating Move v.3</a>
+<a href="https://github.com/saponew/James-Bond/blob/main/dataset/core_bonds_rating.py"> Core US Rating Shifted</a>
+<br><a href="https://github.com/saponew/James-Bond/blob/main/dataset/core_us_rating_shited.py"> Core Bonds Rating</a>
+<br><a href="https://github.com/saponew/James-Bond/blob/main/dataset/credit_rating_move_v1.py"> Credit Rating Move v.1</a>
+<br><a href="https://github.com/saponew/James-Bond/blob/main/dataset/credit_rating_move_v3.py"> Credit Rating Move v.3</a>
 
 ## Models
 ### Logistic Regression
